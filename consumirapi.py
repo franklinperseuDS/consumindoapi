@@ -14,7 +14,7 @@ st.title("Web Data Credit Risck")
 # subtítulo
 st.markdown("Este é um Data App utilizado para prever risco de crédito. O app é baseado em um modelo treinado no Azure Machine Learning Studio https://studio.azureml.net")
 # subtítulo
-st.markdown("Este é um Data App for desenvolvido pelo Prof.Fábio Santos (fssilva@uea.edu.r)")
+
 
 
 Col1 = st.text_input("Status of checking account", key="Col1", value="A11")
