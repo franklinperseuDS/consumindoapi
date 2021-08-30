@@ -109,7 +109,8 @@ if btn_predict:
         # Print the headers - they include the requert ID and the timestamp, which are useful for debugging the failure
         print(error.info())
         print(json.loads(error.read().decode("utf8", 'ignore')))
-
+else:
+    print("error")
     
 	
 	
