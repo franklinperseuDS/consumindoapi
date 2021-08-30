@@ -67,13 +67,13 @@ if btn_predict:
                             'Col18': Col18,   
                             'Col19': Col19,   
                             'Col20': Col20,   
-                            'Col21': "",   
+                            'Col21': "1",   
                     }
                 ],
         },
-    "GlobalParameters":  {
+        "GlobalParameters":  {
+     }
     }
-}
 
     body = str.encode(json.dumps(data))
 
