@@ -25,6 +25,9 @@ Col17 = st.text_input("Job", key="Col17", value="A173");
 Col18 = st.text_input("Number of people providing maintenance for", key="Col18", value="1");
 Col19 = st.text_input("Telephone", key="Col19", value="A192");
 Col20 = st.text_input("Foreign worker", key="Col20", value="A201");
+
+# inserindo um botão na tela
+btn_predict = st.button("Realizar Previsão")
 data = {
         "Inputs": {
                 "input1":
@@ -71,7 +74,14 @@ try:
 
     result = response.read()
     print(result)
-    st.markdown(result)
+    # st.markdown(result)
+    parsed_json = (json.loads(result))
+    y = json.loads(json.dump(parsed_json, indent=4, sort_keys =True))
+    x = y['Results']
+    z= x['output1']
+    m = z[0]
+    print(m['Scored Labels'])
+
 except urllib.error.HTTPError as error:
     print("The request failed with status code: " + str(error.code))
 
